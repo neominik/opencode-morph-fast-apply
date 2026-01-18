@@ -1,0 +1,23 @@
+index.ts
+  a027589dd0674bb9 176,178-180
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.34",
+  "base_commit_sha": "51061f194dbc8cda42cb8ee37451c6f593a9d472",
+  "prompts": {
+    "a027589dd0674bb9": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_42d24ba9fffeEwom3K1RQo756u",
+        "model": "openai/gpt-5.2"
+      },
+      "human_author": "neominik <dominik.engelhardt@nedap.com>",
+      "messages": [],
+      "total_additions": 22,
+      "total_deletions": 99,
+      "accepted_lines": 7,
+      "overriden_lines": 0
+    }
+  }
+}

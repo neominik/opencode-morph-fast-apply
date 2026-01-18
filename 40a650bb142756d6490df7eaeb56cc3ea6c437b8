@@ -1,0 +1,23 @@
+README.md
+  199d352c793b197f 95-104
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.34",
+  "base_commit_sha": "40a650bb142756d6490df7eaeb56cc3ea6c437b8",
+  "prompts": {
+    "199d352c793b197f": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_42cf72c5dffelf58vpjWSMpA2G",
+        "model": "openai/gpt-5.2"
+      },
+      "human_author": "neominik <dominik.engelhardt@nedap.com>",
+      "messages": [],
+      "total_additions": 10,
+      "total_deletions": 0,
+      "accepted_lines": 10,
+      "overriden_lines": 0
+    }
+  }
+}

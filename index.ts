@@ -169,37 +169,30 @@ export const MorphFastApply: Plugin = async ({ directory }) => {
        * Uses "// ... existing code ..." markers to represent unchanged sections.
        */
       morph_edit: tool({
-        description: `Fast code editing using Morph AI (10,500+ tokens/sec).
+        description: `Edit existing files by showing only the changed lines.
 
-Use this tool for efficient partial file edits. It handles lazy edit markers
-so you don't need to provide the full file content.
+Use "// ... existing code ..." to represent unchanged code blocks. Include just enough surrounding context to locate each edit precisely.
 
-FORMAT:
-Use "// ... existing code ..." to represent unchanged code blocks.
-Include just enough surrounding context to locate each edit precisely.
-
-EXAMPLE:
+Example format:
 // ... existing code ...
-function updatedFunction() {
-  // New implementation with changes
-  return "modified";
-}
+FIRST_EDIT
+// ... existing code ...
+SECOND_EDIT
 // ... existing code ...
 
-RULES:
-- ALWAYS use "// ... existing code ..." for unchanged sections
-- Include minimal context around edits for disambiguation
+Rules:
+- Only rewrite entire files if explicitly requested
+- ALWAYS use "// ... existing code ..." for unchanged sections (omitting it can cause deletions)
+- Include minimal context ONLY when needed around edits for disambiguation
 - Preserve exact indentation
-- For deletions: show context before and after, omit deleted lines
+- For deletions: show context before and after, omit the deleted lines
 - Batch multiple edits to the same file in one call
 
-WHEN TO USE:
-- Large files (500+ lines)
-- Multiple scattered changes
-- Complex refactoring
-- When exact string matching is fragile
+Tool choice:
+- Use morph_edit for multi-line / scattered / refactor edits
+- Use edit for small, exact replacements
 
-FALLBACK: If Morph API fails, will automatically fall back to native 'edit' tool.`,
+The "instructions" param must be a brief first-person description generated for this specific edit.`,
 
         args: {
           target_filepath: tool.schema

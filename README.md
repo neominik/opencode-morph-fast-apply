@@ -35,9 +35,6 @@ Add to your global config (`~/.config/opencode/opencode.json`):
 {
   "plugin": [
     "/path/to/morph-fast-apply"
-  ],
-  "instructions": [
-    "/path/to/morph-fast-apply/MORPH_INSTRUCTIONS.md"
   ]
 }
 ```
@@ -48,12 +45,11 @@ Or in a project-local `.opencode/config.json`:
 {
   "plugin": [
     "~/dev/oc-plugins/morph-fast-apply"
-  ],
-  "instructions": [
-    "~/dev/oc-plugins/morph-fast-apply/MORPH_INSTRUCTIONS.md"
   ]
 }
 ```
+
+No additional instructions file is required.
 
 ### 4. Restart OpenCode
 

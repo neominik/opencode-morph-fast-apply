@@ -92,6 +92,16 @@ function validateToken(token) {
 | `MORPH_MODEL` | `morph-v3-fast` | Model (`morph-v3-fast`, `morph-v3-large`, `auto`) |
 | `MORPH_TIMEOUT` | `30000` | Request timeout in ms |
 
+### Using OpenRouter
+
+You can also run Morph models via OpenRouter by pointing this plugin at OpenRouter's API:
+
+```bash
+export MORPH_API_KEY="$OPENROUTER_API_KEY"
+export MORPH_API_URL="https://openrouter.ai/api"
+export MORPH_MODEL="morph/morph-v3-fast"   # or morph/morph-v3-large
+```
+
 ## How It Works
 
 1. Reads the original file content
